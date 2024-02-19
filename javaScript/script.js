@@ -8,7 +8,6 @@ let inputEle=document.getElementById("input1")
 let apply=document.getElementById('apply')
 let show=document.getElementById('show');
 let Button=document.getElementById("Button")
-let number=document.getElementById("phoneNumber");
 let Modal=document.getElementById("Modal");
 
 
@@ -49,11 +48,10 @@ function seat(id,showId,AvailableSeat,Total){
                     grandTotal.innerText=total-discount;
                     Button.classList.add("hidden")
 
+                }else{
+                    alert("Invalid Coupon")
                 }
-            })
-
-            
-
+            })     
         }
 
         count++;
@@ -63,24 +61,24 @@ function seat(id,showId,AvailableSeat,Total){
     })
 }
 
-
-
-document.querySelector("#phoneNumber").addEventListener('keyup',(event)=>{
-    let Value=event.target.value;
-    
-
-    if(Value){
-        Modal.removeAttribute("disabled")
-    }
-
-})
-
-
-
-
-
-let seatNumber=["A1","A2","A3","A4","B1","B2","B3","B4","C1","C2","C3","C4"]
+// Seat Booking
+let seatNumber=["A1","A2","A3","A4","B1","B2","B3","B4","C1","C2","C3","C4"];
 for (let num of seatNumber){
     seat(num,show,"availableSeat","total")
 }
+
+// Phone Number Validation
+    document.querySelector("#phoneNumber").addEventListener('keyup',(event)=>{
+        if(event.target.value.length===11){
+            Modal.removeAttribute("disabled")
+        }
+    
+        else if(event.target.value.length>11){
+            alert("Your Phone Number Should Not More Then 11 Digit..")
+            event.target.value="";
+            Modal.setAttribute("disabled",true)
+        }
+    
+    })
+
 

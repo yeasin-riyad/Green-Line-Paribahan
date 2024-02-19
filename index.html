@@ -399,20 +399,28 @@
 
             </div>
 
-            <h1 class=" inter font-semibold text-xl text-gray-500 mb-5">Phone Number*</h1>
-            <input  value=""  type="number" placeholder="Enter Your Number Here" class="input input-bordered w-full max-w-xs mb-6" id="phoneNumber" />
+            <h1 class=" inter font-semibold text-xl text-gray-950 mb-5">Phone Number*</h1>
+            <input  value=""  type="number" placeholder="Enter 11 Digit Phone Number" class="input input-bordered w-full max-w-xs mb-6" id="phoneNumber" />
             <br>
 
             <!-- Open the modal using ID.showModal() method -->
             <button disabled id="Modal" class="btn w-full bg-lime-500 text-white raleway text-xl font-extrabold" onclick="my_modal_1.showModal()">Next</button>
             <dialog id="my_modal_1" class="modal">
               <div class="modal-box">
-                <h3 class="font-bold text-lg">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
+                <!-- <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p> -->
+                <div class="text-center inter">
+                  <img class="mx-auto" src="images/success.png" alt="" srcset="">
+                  <h1 class="text-2xl font-bold text-green-500 my-5">SUCCESS</h1>
+                  <h2 class="text-xl font-semibold text-neutral-600 p-5">Thank you for Booking Our Bus Seats. 
+                    We are working hard to find the best service and deals for you.</h2>
+
+                    <h2 class="text-xl font-light px-5">Shortly you will find a confirmation in your Number.</h2>
+                </div>
                 <div class="modal-action">
                   <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
+                    <button class="btn bg-green-500 text-white">Continue</button>
                   </form>
                 </div>
               </div>
